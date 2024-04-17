@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cardapp</string>
+    <string name="card_holder_name">Card holder name</string>
+    <string name="card_holder_number">Card number</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="cvv">CVV</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="save">save</string>
+</resources>
