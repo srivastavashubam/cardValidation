@@ -1,10 +1,8 @@
 package com.user.cardapp
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -16,9 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
@@ -87,7 +83,8 @@ fun AddPaymentCard() {
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
                 visualTransformation = CreditCardFilter,
-                errorMessage = cardNumberErrorMessage
+                errorMessage = cardNumberErrorMessage,
+                leadingIcon = androidx.core.R.drawable.ic_call_answer_video
             )
         }
 
@@ -126,21 +123,13 @@ fun AddPaymentCard() {
                     },
                     modifier = Modifier.weight(1f)
                         .padding(end = 8.dp),
-                    errorMessage = cvvNumberErrorMessage
-                )
-
-                Image(
-                    painter = painterResource(R.drawable.ic_launcher_foreground),
-                    contentDescription = "",
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.size(72.dp)
+                    errorMessage = cvvNumberErrorMessage,
+                    trailingIcon = androidx.core.R.drawable.ic_call_decline_low
                 )
 
             }
 
         }
-
-
 
         item {
             InputItem(
